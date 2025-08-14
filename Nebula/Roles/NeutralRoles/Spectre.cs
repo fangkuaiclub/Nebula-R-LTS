@@ -534,13 +534,13 @@ public class Spectre : Role
                     return new MSButton(1.6f, 0.4f, "Customize", TMPro.FontStyles.Bold, () =>
                     {
                         Action<byte> refresher = getRefresher(new Tuple<CustomTaskSetting, Sprite?>(friedTaskSetting, spectreFriedConsoleSprite.GetSprite()));
-                        refresher(GameOptionsManager.Instance.CurrentGameOptions.MapId);
+                        refresher(GameOptionsManager.Instance.currentNormalGameOptions.MapId);
                     });
                 else if (spectreTaskOption.getSelection() == 2)
                     return new MSButton(1.6f, 0.4f, "Customize", TMPro.FontStyles.Bold, () =>
                     {
                         Action<byte> refresher = getRefresher(new Tuple<CustomTaskSetting, Sprite?>(letterTaskSetting, spectreLetterConsoleSprite.GetSprite()), new Tuple<CustomTaskSetting, Sprite?>(statueTaskSetting, spectreRancorConsoleSprite.GetSprite()));
-                        refresher(GameOptionsManager.Instance.CurrentGameOptions.MapId);
+                        refresher(GameOptionsManager.Instance.currentNormalGameOptions.MapId);
                     });
                 else
                     return new MSMargin(1.7f);
